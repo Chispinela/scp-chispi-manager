@@ -10,6 +10,28 @@ A dark, purple Windows desktop application for hosting and managing multiple **S
 
 This independent community project is not an official Northwood, Valve, Microsoft, Radmin, or OpenAI product.
 
+## Download for Windows
+
+**[Download the Windows installer — v1.0.5](https://github.com/Chispinela/scp-chispi-manager/releases/download/v1.0.5/SCP-Chispi-Manager-Setup-1.0.5.exe)**
+
+For **Windows 10 / Windows 11 x64 (Intel/AMD)**. Download the EXE and run it to choose your installation folder. No Node.js installation or source build is required. The game is downloaded separately by the server wizard.
+
+[Release notes and SHA-256 checksum](https://github.com/Chispinela/scp-chispi-manager/releases/tag/v1.0.5) · [All releases](https://github.com/Chispinela/scp-chispi-manager/releases)
+
+## Screenshots
+
+Real English application captures with isolated example profiles. No real players, private addresses, credentials, or personal logs are shown. Click an image for its full-resolution view. [Capture details](docs/SCREENSHOTS.md).
+
+[![Dashboard and multiple-server profiles](docs/screenshots/dashboard.png)](docs/screenshots/dashboard.png)
+
+| Configuration | Administration |
+| --- | --- |
+| [![Gameplay configuration](docs/screenshots/configuration.png)](docs/screenshots/configuration.png) | [![Remote Admin roles](docs/screenshots/administration.png)](docs/screenshots/administration.png) |
+
+| Backups | New server wizard |
+| --- | --- |
+| [![Backup management](docs/screenshots/backups.png)](docs/screenshots/backups.png) | [![Server creation wizard](docs/screenshots/server-wizard.png)](docs/screenshots/server-wizard.png) |
+
 ## Features
 
 | Area | What it provides |
@@ -30,7 +52,7 @@ Percentages come from SteamCMD. Download and verification have separate percenta
 
 ## Install and create a server
 
-1. Run a Windows installer built from this project. Choose the application directory and shortcuts.
+1. [Download the Windows installer](https://github.com/Chispinela/scp-chispi-manager/releases/download/v1.0.5/SCP-Chispi-Manager-Setup-1.0.5.exe), run it, and choose the application directory and shortcuts.
 2. Choose **English** in the top-right language menu if needed.
 3. Select **New server** and choose a name, unique UDP port, and hosting directory. Server storage is independent of the application installation directory.
 4. Read the SCP:SL EULA and accept it only if you agree. Keep the installation option enabled to download SteamCMD and the dedicated server.
