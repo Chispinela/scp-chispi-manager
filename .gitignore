@@ -1,0 +1,16 @@
+node_modules/
+release/
+runtime/
+output/
+*.log
+*.jsonl
+.env
+.env.*
+!.env.example
+.npm-cache/
+test-results/
+playwright-report/
+*.zip
+*.exe
+*.blockmap
+SHA256SUMS.txt

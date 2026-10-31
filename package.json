@@ -1,0 +1,72 @@
+{
+  "name": "scp-chispi-manager",
+  "version": "1.0.5",
+  "description": "AI-assisted Windows manager for multiple SCP: Secret Laboratory dedicated servers",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test tests/core.test.js tests/diagnostics.test.js",
+    "test:ui": "node tests/ui.cjs",
+    "dist": "electron-builder --win nsis --x64",
+    "pack": "electron-builder --win --dir --x64",
+    "test:diagnostics": "node tests/diagnostics-ui.cjs",
+    "test:folder-recovery": "node tests/folder-recovery-ui.cjs"
+  },
+  "keywords": [],
+  "author": "Chispi",
+  "license": "MIT",
+  "type": "commonjs",
+  "build": {
+    "appId": "com.chispi.scpmanager",
+    "productName": "SCP Chispi Manager",
+    "npmRebuild": false,
+    "asarUnpack": [
+      "node_modules/node-pty/**"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "docs/**/*",
+      "!node_modules/node-pty/**/*.pdb",
+      "!node_modules/node-pty/prebuilds/darwin-*/**",
+      "!node_modules/node-pty/prebuilds/win32-arm64/**",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico",
+      "signExecutable": false
+    },
+    "nsis": {
+      "include": "build/installer.nsh",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "installerLanguages": [
+        "es_ES",
+        "en_US",
+        "ru_RU",
+        "zh_CN",
+        "ja_JP",
+        "pt_PT"
+      ],
+      "displayLanguageSelector": true,
+      "deleteAppDataOnUninstall": false,
+      "artifactName": "SCP-Chispi-Manager-Setup-${version}.${ext}"
+    }
+  },
+  "devDependencies": {
+    "electron": "^44.9.1",
+    "electron-builder": "^26.15.3",
+    "playwright": "^1.64.1"
+  },
+  "dependencies": {
+    "adm-zip": "^0.6.1",
+    "node-pty": "^1.1.0"
+  }
+}
